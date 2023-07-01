@@ -2,12 +2,9 @@
 
 import React, { FC, useEffect, useState } from "react";
 import { ThemeProvider as LocalThemeProvider } from "next-themes";
+import { type ThemeProviderProps } from "next-themes/dist/types";
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-}
-
-const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
+const ThemeProvider: FC<ThemeProviderProps> = ({ children, ...props }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,7 +15,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
     return <React.Fragment>{children}</React.Fragment>;
   }
 
-  return <LocalThemeProvider>{children}</LocalThemeProvider>;
+  return <LocalThemeProvider {...props}>{children}</LocalThemeProvider>;
 };
 
 export default ThemeProvider;

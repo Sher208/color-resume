@@ -8,7 +8,7 @@ interface CertificationsProps {}
 const Certifications: FC<CertificationsProps> = ({}) => {
   return (
     <div>
-      <blockquote className="mt-2 border-l-2 border-l-black pl-2 font-medium text-2xl mb-4">
+      <blockquote className="mt-2 border-l-2 border-l-portfolio-darkgreen pl-2 font-medium text-lg md:text-2xl mb-4">
         Certifications
       </blockquote>
       <div className="grid grid-cols-3 gap-2">
@@ -16,7 +16,7 @@ const Certifications: FC<CertificationsProps> = ({}) => {
           return (
             <Card
               key={index}
-              className="bg-green-300 shadow-lg hover:shadow-none hover:bg-green-100 cursor-pointer flex flex-row justify-center align-middle"
+              className="bg-portfolio-green shadow-lg hover:shadow-none hover:bg-portfolio-lightgreen cursor-pointer flex flex-row justify-center align-middle"
             >
               <Image
                 src={data.icon}

@@ -2,6 +2,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
+import { Toaster } from "@/components/ui/Toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning={true}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={cn(
-          "bg-white text-slate-900 antialiased light ",
+          "bg-white text-slate-900 antialiased light",
           inter.className
         )}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <main className="dark:text-gray-300">
+            {children}
+            <Toaster />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@ import { FC } from "react";
 
 interface WorkExpirenceProps extends WorkCompany {}
 
-const WorkExpirence: FC<WorkExpirenceProps> = ({ name, position, website }) => {
+const WorkExpirence: FC<WorkExpirenceProps> = () => {
   return (
     <div>
       <div>
@@ -47,7 +47,7 @@ const WorkExpirence: FC<WorkExpirenceProps> = ({ name, position, website }) => {
 
           <li>
             <div className="flex-start flex items-center pt-2">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-red-200 dark:bg-neutral-500"></div>
+              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-detail dark:bg-neutral-500"></div>
               <p className="text-sm text-neutral-500 dark:text-neutral-300">
                 Aug 2021 - Mar 2023
               </p>
@@ -66,7 +66,7 @@ const WorkExpirence: FC<WorkExpirenceProps> = ({ name, position, website }) => {
 
           <li>
             <div className="flex-start flex items-center pt-2">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-red-200 dark:bg-neutral-500"></div>
+              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-detail dark:bg-neutral-500"></div>
               <p className="text-sm text-neutral-500 dark:text-neutral-300">
                 Feb 2021 - Aug 2021
               </p>
