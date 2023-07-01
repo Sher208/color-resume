@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Thilakraj Shetty H",
-  description: "Thilak's Portfolio",
+  description:
+    "I am an highly skilled and experienced full-stack developer proficient in a wide range of frontend and backend technologies. With expertise in various programming languages, frameworks, and tools, I have a proven track record of delivering exceptional, high-quality, and feature-rich applications",
 };
 
 export default function RootLayout({
