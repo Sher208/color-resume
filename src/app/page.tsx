@@ -3,12 +3,11 @@ import Certifications from "@/components/Certifications";
 import DetailSection from "@/components/DetailSection";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="relative">
-      <div className="relative inset-0 w-full md:h-[30vh] md:min-h-screen md:fixed md:w-4/12 lg:w-3/12 bg-portfolio-yellow border-solid border-4 border-portfolio-border">
+      <div className="relative inset-0 w-full md:h-[30vh] md:min-h-screen md:fixed md:w-4/12 lg:w-3/12 bg-portfolio-yellow border-solid border-4 border-portfolio-border overflow-auto">
         <DetailSection />
       </div>
       <div className="w-full ml-auto md:w-8/12 lg:w-9/12 bg-portfolio">

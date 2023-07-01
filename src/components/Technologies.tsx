@@ -1,5 +1,4 @@
 import { TECHNOLOGIES } from "@/constant/Technologies";
-import { Card } from "@/components/ui/Card";
 import { FC } from "react";
 
 interface TechnologiesProps {}

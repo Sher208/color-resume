@@ -15,7 +15,7 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
             Senior Software Developer
           </h1>
         </div>
-        <div className="py-1">
+        <div className="py-1 block md:hidden">
           <DownloadButton />
         </div>
       </div>

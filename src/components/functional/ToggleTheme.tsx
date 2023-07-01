@@ -4,7 +4,6 @@ import { FC } from "react";
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/Button";
 
 interface ToggleThemeProps extends React.HTMLAttributes<HTMLButtonElement> {}
 
@@ -16,7 +15,12 @@ const ToggleTheme: FC<ToggleThemeProps> = ({ ...props }) => {
     setTheme(currentTheme);
   };
   return (
-    <button {...props} onClick={changeTheme}>
+    <button
+      id="themechange"
+      aria-label="Change theme of the application"
+      {...props}
+      onClick={changeTheme}
+    >
       {theme === "dark" ? <Sun size={25} /> : <Moon size={25} />}
     </button>
   );

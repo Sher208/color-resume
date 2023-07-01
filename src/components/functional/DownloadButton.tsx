@@ -9,6 +9,7 @@ interface DownloadButtonProps {}
 const DownloadButton: FC<DownloadButtonProps> = ({}) => {
   return (
     <Link
+      aria-label="View My Resume"
       href="https://drive.google.com/file/d/11bx8wkYMGTWZGI3uWTjn6gcBwVLMAYik/view?usp=drive_link"
       className={cn(buttonVariants())}
       download={"ThilakrajShetty.pdf"}

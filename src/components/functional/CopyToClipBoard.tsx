@@ -23,7 +23,11 @@ const CopyToClipBoard: FC<CopyToClipBoardProps> = ({
     });
   };
   return (
-    <button {...props} onClick={onCopyToClipBoard}>
+    <button
+      aria-label="Copy Email to Clipboard"
+      {...props}
+      onClick={onCopyToClipBoard}
+    >
       {children}
     </button>
   );
