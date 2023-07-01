@@ -21,7 +21,7 @@ export const PROJECTS: Projects[] = [
   },
   {
     icon: Vscode,
-    heading: "Commegen Extenstion",
+    heading: "Commegen Extension",
     description:
       "This solution is designed to address the common challenges of insufficient code deocumentation in software development. By seamlessly integrating with VSCode and leveraging the capabilities of Open AI API this tool generates detailed code comments, enchances collaboration, saves time, and improves software quality across diverse development roles.",
     githubLink: "https://github.com/Sher208/commegen",
