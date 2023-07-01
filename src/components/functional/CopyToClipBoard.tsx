@@ -15,7 +15,8 @@ const CopyToClipBoard: FC<CopyToClipBoardProps> = ({
   ...props
 }) => {
   const { toast } = useToast();
-  const onCopyToClipBoard = () => {
+  const onCopyToClipBoard = (e: any) => {
+    e.preventDefault();
     navigator.clipboard.writeText(copyText);
     toast({
       title: toastMessage,

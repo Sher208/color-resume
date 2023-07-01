@@ -5,7 +5,7 @@ import DeepLearningAI from "../../public/Certificates/deeplearningai.png";
 
 export interface Certificates {
   icon: StaticImageData;
-  link?: string;
+  link: string;
 }
 
 export const CERTIFICATES: Certificates[] = [
