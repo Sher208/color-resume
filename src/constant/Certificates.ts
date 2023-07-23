@@ -19,6 +19,6 @@ export const CERTIFICATES: Certificates[] = [
   },
   {
     icon: DeepLearningAI,
-    link: "https://www.credly.com/badges/97fab96c-aca8-4150-b56b-af1766435705/public_url",
+    link: "https://www.coursera.org/account/accomplishments/certificate/9EJ5QZ952MM2",
   },
 ];
