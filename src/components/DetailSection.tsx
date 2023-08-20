@@ -88,12 +88,12 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
             </Link>
           </div>
         </div>
-        <hr className="hidden md:block h-px my-6 bg-black border-0 dark:bg-gray-700"></hr>
+        {/* <hr className="hidden md:block h-px my-6 bg-black border-0 dark:bg-gray-700"></hr>
         <div className="hidden md:block">
           <div className="flex py-1 flex-row justify-center items-center">
             <DownloadButton />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
