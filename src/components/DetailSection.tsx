@@ -6,13 +6,16 @@ import { BiCodeAlt, BiEdit, BiMedal, BiUser } from "react-icons/bi";
 import { PiSuitcaseBold } from "react-icons/pi";
 import CopyToClipBoard from "./functional/CopyToClipBoard";
 import ToggleTheme from "./functional/ToggleTheme";
+import ViewCounter from "./functional/ViewCounter";
 
 interface DetailSectionProps {}
 
 const DetailSection: FC<DetailSectionProps> = ({}) => {
   return (
     <div>
-      <ToggleTheme className="absolute p-4" />
+      <div className="absolute flex flex-col">
+        <ToggleTheme className="p-2" />
+      </div>
       <div className="container py-8 flex flex-col justify-center align-middle">
         <div className="flex flex-col justify-center align-middle h-4/12">
           <div className="mx-auto my-1 md:my-2">
@@ -92,6 +95,9 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
           </div>
         </div>
         {/* <hr className="hidden md:block h-px my-4 bg-black border-0 dark:bg-gray-700"></hr> */}
+      </div>
+      <div className="absolute bottom-0 flex flex-auto justify-center">
+        <ViewCounter className="p-2" />
       </div>
     </div>
   );
