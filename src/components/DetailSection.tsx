@@ -21,7 +21,7 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
           <div className="mx-auto my-1 md:my-4">
             <Image
               className="rounded-full border-solid border-4 border-portfolio-border"
-              src="https://media.licdn.com/dms/image/C5103AQHH50lvO9zZ8Q/profile-displayphoto-shrink_400_400/0/1552233662547?e=1693440000&v=beta&t=yBVVa5XQK0dc6ZxIwXm2PSllGmpcpWFTHZOP2wFEfx8"
+              src="https://media.licdn.com/dms/image/C5103AQHH50lvO9zZ8Q/profile-displayphoto-shrink_200_200/0/1552233662547?e=1701907200&v=beta&t=jPZ0OxfxM2GetQo6DMiTRfwoVex6V2oltUiMD8zYqp0"
               width={120}
               height={120}
               alt="Portfolio Picture"
