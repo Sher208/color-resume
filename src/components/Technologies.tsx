@@ -9,7 +9,7 @@ const Technologies: FC<TechnologiesProps> = ({}) => {
       <blockquote className="mt-4 border-l-2 border-l-portfolio-darkgreen pl-2 font-medium text-lg md:text-2xl mb-4 md:mt-2">
         Skills
       </blockquote>
-      <div className="flex flex-row justify-center flex-wrap">
+      <div className="flex flex-row justify-center flex-wrap ml-3">
         {TECHNOLOGIES.map((data, index) => {
           return (
             <div

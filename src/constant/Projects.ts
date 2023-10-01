@@ -1,14 +1,6 @@
+import { Projects } from "@/types/Projects";
 import GameOfLife from "../../public/projects/gameoflife.gif";
 import Vscode from "../../public/projects/Vscode.png";
-import { StaticImageData } from "next/image";
-
-export interface Projects {
-  icon: StaticImageData;
-  heading: string;
-  description: string;
-  githubLink?: string;
-  shareLink?: string;
-}
 
 export const PROJECTS: Projects[] = [
   {

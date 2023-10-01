@@ -25,6 +25,7 @@ module.exports = {
           lightgreen: "rgb(var(--color-calm-light-green) / <alpha-value>)",
           green: "rgb(var(--color-calm-green) / <alpha-value>)",
           darkgreen: "rgb(var(--color-calm-dark-green) / <alpha-value>)",
+          darkergreen: "rgb(var(--color-calm-darker-green) / <alpha-value>)",
           border: "rgb(var(--color-border) / <alpha-value>)",
           heading: "rgb(var(--color-heading) / <alpha-value>)",
         },

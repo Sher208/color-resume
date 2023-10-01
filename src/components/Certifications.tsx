@@ -12,7 +12,7 @@ const Certifications: FC<CertificationsProps> = ({}) => {
       <blockquote className="mt-2 border-l-2 border-l-portfolio-darkgreen pl-2 font-medium text-lg md:text-2xl mb-4">
         Certifications
       </blockquote>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2 ml-3">
         {CERTIFICATES.map((data, index) => {
           return (
             <Link target="_blank" key={index} href={data.link}>

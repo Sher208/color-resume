@@ -1,12 +1,7 @@
-import { StaticImageData } from "next/image";
 import SolutionArchitextAssociate from "../../public/Certificates/SolutionArchitectAssociate.png";
 import DeveloperCertifiedAssociate from "../../public/Certificates/DeveloperCertifiedAssociate.png";
 import DeepLearningAI from "../../public/Certificates/deeplearningai.png";
-
-export interface Certificates {
-  icon: StaticImageData;
-  link: string;
-}
+import { Certificates } from "@/types/Certificates";
 
 export const CERTIFICATES: Certificates[] = [
   {

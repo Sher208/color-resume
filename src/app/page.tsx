@@ -3,6 +3,7 @@ import Certifications from "@/components/Certifications";
 import DetailSection from "@/components/DetailSection";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
+import WorkExperience from "@/components/WorkExpirence";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
         </div>
         <div id="skills" className="container -ml-2 pr-2">
           <Technologies />
+        </div>
+        <div id="work" className="container -ml-2 pr-2">
+          <WorkExperience />
         </div>
         <div id="projects" className="container -ml-2 pr-2">
           <Projects />

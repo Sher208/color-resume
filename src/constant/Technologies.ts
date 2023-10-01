@@ -1,4 +1,3 @@
-import { IconType } from "react-icons";
 import { DiReact, DiNodejsSmall, DiSass } from "react-icons/di";
 import {
   SiSvelte,
@@ -18,11 +17,7 @@ import {
   BiLogoKubernetes,
 } from "react-icons/bi";
 import { DiMysql } from "react-icons/di";
-
-interface Technologies {
-  icon: IconType;
-  name: string;
-}
+import { Technologies } from "@/types/Technologies";
 
 export const TECHNOLOGIES: Technologies[] = [
   {
