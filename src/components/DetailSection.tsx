@@ -97,7 +97,7 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
         {/* <hr className="hidden md:block h-px my-4 bg-black border-0 dark:bg-gray-700"></hr> */}
       </div>
       <div className="absolute bottom-0 flex flex-auto justify-center">
-        <ViewCounter className="p-2" />
+        <ViewCounter className="p-2 md:mb-4" />
       </div>
     </div>
   );
