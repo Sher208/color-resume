@@ -19,7 +19,7 @@ export const WORK_EXPERIENCE: WorkCompany[] = [
           {
             id: 2,
             content:
-              "Revitalized application theming and design through the utilization of advanced React concepts, yielding an enhanced user experience, and devised a method to achieve a 50% reduction in future development time through dynamic changes.",
+              "Led the development of a cohesive React Component Library within an Nx monorepo, employing advanced technologies to achieve a 50% enhancement in both code consistency and efficiency. Devised a comprehensive theming strategy, created a Storybook for seamless component visualization, and implemented industry-standard versioning practices for the project.",
           },
         ],
       },
