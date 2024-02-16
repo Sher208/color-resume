@@ -1,30 +1,30 @@
 const code = function () {
-  window.__onThemeChange = function () {};
+  (window as any).__onThemeChange = function () {};
+
+  let preferredTheme: string | undefined | null;
 
   function setTheme(newTheme: string | undefined) {
-    window.__theme = newTheme;
+    (window as any).__theme = newTheme;
     preferredTheme = newTheme;
     document.documentElement.dataset.theme = newTheme;
-    window.__onThemeChange(newTheme);
+    (window as any).__onThemeChange(newTheme);
   }
-
-  var preferredTheme;
 
   try {
     preferredTheme = localStorage.getItem("theme");
   } catch (err) {}
 
-  window.__setPreferredTheme = function (newTheme) {
+  (window as any).__setPreferredTheme = function (newTheme: string) {
     setTheme(newTheme);
     try {
       localStorage.setItem("theme", newTheme);
     } catch (err) {}
   };
 
-  var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
   darkQuery.addEventListener("change", function (e) {
-    window.__setPreferredTheme(e.matches ? "dark" : "light");
+    (window as any).__setPreferredTheme(e.matches ? "dark" : "light");
   });
 
   setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"));
