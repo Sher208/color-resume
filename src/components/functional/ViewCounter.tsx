@@ -5,7 +5,7 @@ import { FC } from "react";
 interface ViewCounterProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const ViewCounter: FC<ViewCounterProps> = async ({ ...props }) => {
-  // const views = await kv.incr("views");
+  const views = await kv.incr("views");
 
   return (
     <div {...props}>
@@ -13,9 +13,9 @@ const ViewCounter: FC<ViewCounterProps> = async ({ ...props }) => {
         <div>
           <AiOutlineEye className="h-8 w-8" />
         </div>
-        {/* <div className="text-m font-semibold ml-2">
+        <div className="text-m font-semibold ml-2">
           {Intl.NumberFormat("en-us").format(views)}
-        </div> */}
+        </div>
       </div>
     </div>
   );
