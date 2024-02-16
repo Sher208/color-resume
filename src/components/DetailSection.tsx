@@ -5,8 +5,13 @@ import Link from "next/link";
 import { BiCodeAlt, BiEdit, BiMedal, BiUser } from "react-icons/bi";
 import { PiSuitcaseBold } from "react-icons/pi";
 import CopyToClipBoard from "./functional/CopyToClipBoard";
-import ToggleTheme from "./functional/ToggleTheme";
 import ViewCounter from "./functional/ViewCounter";
+import ProfilePic from "../../public/personal/Me.jpg";
+import dynamic from "next/dynamic";
+
+const ToggleTheme = dynamic(() => import("./functional/ToggleTheme"), {
+  ssr: false,
+});
 
 interface DetailSectionProps {}
 
@@ -20,8 +25,8 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
         <div className="flex flex-col justify-center align-middle h-4/12">
           <div className="mx-auto my-1 md:my-2">
             <Image
-              className="rounded-full border-solid border-4 border-portfolio-border"
-              src="https://media.licdn.com/dms/image/C5103AQHH50lvO9zZ8Q/profile-displayphoto-shrink_200_200/0/1552233662547?e=1701907200&v=beta&t=jPZ0OxfxM2GetQo6DMiTRfwoVex6V2oltUiMD8zYqp0"
+              className="border-solid border-2 border-portfolio-border"
+              src={ProfilePic}
               width={120}
               height={120}
               alt="Portfolio Picture"
@@ -97,7 +102,7 @@ const DetailSection: FC<DetailSectionProps> = ({}) => {
         {/* <hr className="hidden md:block h-px my-4 bg-black border-0 dark:bg-gray-700"></hr> */}
       </div>
       <div className="absolute bottom-0 flex flex-auto justify-center">
-        <ViewCounter className="p-2 md:mb-4" />
+        <ViewCounter className="p-2" />
       </div>
     </div>
   );

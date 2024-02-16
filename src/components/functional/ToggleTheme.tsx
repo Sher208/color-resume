@@ -1,27 +1,31 @@
 "use client";
 
-import { FC } from "react";
-import * as React from "react";
+import { FC, useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 
 interface ToggleThemeProps extends React.HTMLAttributes<HTMLButtonElement> {}
 
 const ToggleTheme: FC<ToggleThemeProps> = ({ ...props }) => {
-  const { theme, setTheme } = useTheme();
+  const [theme, setTheme] = useState(global.window?.__theme || "light");
 
-  const changeTheme = () => {
-    const currentTheme = theme === "dark" ? "light" : "dark";
-    setTheme(currentTheme);
+  const isDark = theme === "dark";
+
+  const toggleTheme = () => {
+    global.window?.__setPreferredTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    global.window.__onThemeChange = setTheme;
+  }, []);
+
   return (
     <button
       id="themechange"
       aria-label="Change theme of the application"
       {...props}
-      onClick={changeTheme}
+      onClick={toggleTheme}
     >
-      {theme === "dark" ? <Sun size={25} /> : <Moon size={25} />}
+      {isDark ? <Sun size={25} /> : <Moon size={25} />}
     </button>
   );
 };

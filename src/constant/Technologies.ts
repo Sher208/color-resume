@@ -7,6 +7,7 @@ import {
   SiTypescript,
   SiLinux,
   SiMongodb,
+  SiStorybook,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -47,6 +48,10 @@ export const TECHNOLOGIES: Technologies[] = [
   {
     icon: BiLogoTailwindCss,
     name: "Tailwind",
+  },
+  {
+    icon: SiStorybook,
+    name: "Storybook",
   },
   {
     icon: SiWebpack,

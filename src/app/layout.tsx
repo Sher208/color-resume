@@ -1,15 +1,54 @@
-import ThemeProvider from "@/providers/ThemeProvider";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/Toaster";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+import { getTheme } from "@/lib/getTheme";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Thilakraj Shetty H",
-  description:
-    "I am an highly skilled and experienced full-stack developer proficient in a wide range of frontend and backend technologies. With expertise in various programming languages, frameworks, and tools, I have a proven track record of delivering exceptional, high-quality, and feature-rich applications",
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [
+    "Thilakraj Shetty",
+    "Full Stack Developer",
+    "Thilakraj",
+    "Thilak Raj",
+    "Thilakraj Shetty H",
+  ],
+  authors: [
+    {
+      name: "Thilakraj Shetty",
+      url: "thilakrajshetty.vercel.app",
+    },
+  ],
+  creator: "Thilakraj Shetty",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "../../public/personal/Me.jpeg",
+        width: 500,
+        height: 500,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  icons: {
+    icon: "../../pulbic/favicon/favicon.ico",
+    shortcut: "../../pulbic/favicon/favicon-16x16.png",
+    apple: "../../pulbic/favicon/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,18 +58,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body
-        className={cn(
-          "bg-white text-slate-900 antialiased light",
-          inter.className
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <main className="dark:text-gray-300">
-            {children}
-            <Toaster />
-          </main>
-        </ThemeProvider>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: getTheme }} />
+      </head>
+      <body className={cn("antialiased light", inter.className)}>
+        <main className="dark:text-gray-300">
+          {children}
+          <Toaster />
+        </main>
       </body>
     </html>
   );

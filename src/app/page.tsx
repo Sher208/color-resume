@@ -31,8 +31,8 @@ export default function Home() {
           <Certifications />
         </div>
         <div className="px-6 mt-8 bg-portfolio-red border-solid border-portfolio-border py-4 border-4 md:border-l-0">
-          <h1 className="text-center text-xs md:text-lg">
-            © Copyright 2023 − Thilakraj Shetty H
+          <h1 className="text-center text-xs md:text-lg font-bold">
+            Made by 👨‍💻 Thilakraj Shetty H
           </h1>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import SolutionArchitextAssociate from "../../public/Certificates/SolutionArchitectAssociate.png";
-import DeveloperCertifiedAssociate from "../../public/Certificates/DeveloperCertifiedAssociate.png";
-import DeepLearningAI from "../../public/Certificates/deeplearningai.png";
+import SolutionArchitextAssociate from "../../public/certificates/SolutionArchitectAssociate.png";
+import DeveloperCertifiedAssociate from "../../public/certificates/DeveloperCertifiedAssociate.png";
+import DeepLearningAI from "../../public/certificates/deeplearningai.png";
 import { Certificates } from "@/types/Certificates";
 
 export const CERTIFICATES: Certificates[] = [
