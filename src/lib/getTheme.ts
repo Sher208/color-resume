@@ -21,13 +21,13 @@ const code = function () {
     } catch (err) {}
   };
 
-  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  // const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  darkQuery.addEventListener("change", function (e) {
-    (window as any).__setPreferredTheme(e.matches ? "dark" : "light");
-  });
+  // darkQuery.addEventListener("change", function (e) {
+  //   (window as any).__setPreferredTheme(e.matches ? "dark" : "light");
+  // });
 
-  setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"));
+  setTheme(preferredTheme || "light");
 };
 
 export const getTheme = `(${code})();`;
